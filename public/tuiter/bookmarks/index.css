@@ -1,0 +1,18 @@
+.wd-margin-all {
+    margin: 30px;
+}
+
+.wd-round-corner-top {
+    width: 400px; border-top-left-radius: 30px; border-top-right-radius: 30px;
+}
+
+.wd-border-1 {
+    border: solid 1px lightgray;
+}
+
+.wd-border-2 {
+    border: solid 1px lightgray;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 376px;
+}
