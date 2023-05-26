@@ -1,0 +1,20 @@
+[
+    {
+      "_id": 123,
+      "userName": "NASA",
+      "handle": "NASA",
+      "avatarIcon": "nasa.png"
+    },
+    {
+      "_id": 234,
+      "userName": "Marvel",
+      "handle": "Marvel",
+      "avatarIcon": "marvel.png"
+    },
+    {
+      "_id": 345,
+      "userName": "Brawl Stars",
+      "handle": "BrawlStars",
+      "avatarIcon": "BrawlStars.png"
+    }
+]
