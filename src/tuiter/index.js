@@ -6,10 +6,17 @@ import HomeScreen from "./home-screen";
 import ExploreScreen from "./explore-screen";
 import BookmarksScreen from "./bookmarks-screen";
 import ProfileScreen from "./profile-screen";
+import whoReducer from "./reducers/who-reducer";
+import { configureStore } from '@reduxjs/toolkit';
+import {Provider} from "react-redux";
+import tuitsReducer from "./reducers/tuits-reducer";
+const store = configureStore(
+  {reducer: {who: whoReducer, tuits: tuitsReducer}});
 
 
 function Tuiter() {
  return (
+  <Provider store={store}>
    <div>
      <Nav />
      <div className="row">
@@ -24,11 +31,12 @@ function Tuiter() {
            <Route path="/profile" element={<ProfileScreen />} />
          </Routes>
        </div>
-       <div className="col-0 col-sm-0 col-md-0 col-lg-4 col-xl-3 col-xxl-3">
+       <div className="d-none d-lg-block col-lg-4 col-xl-3 col-xxl-3">
          <WhoToFollowList />
        </div>
      </div>
    </div>
+   </Provider>
  );
 }
 export default Tuiter;

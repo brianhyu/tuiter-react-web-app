@@ -1,5 +1,14 @@
+import React from "react";
+import WhatsHappening from "../whats-happening";
+import TuitList from "../tuits/tuits-list";
 
-function HomeScreen() {
-    return <h1>Home</h1>;
-}
+const HomeScreen = () => {
+ return(
+   <>
+     <h4>Home</h4>
+     <WhatsHappening/>
+     <TuitList/>
+   </>
+ );
+};
 export default HomeScreen;
