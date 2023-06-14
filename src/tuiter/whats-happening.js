@@ -1,6 +1,13 @@
 import React, {useState} from "react";
 import {useDispatch} from "react-redux";
-import { createTuit } from "./reducers/tuits-reducer";
+import {createTuitThunk} from "./services/tuits-thunks";
+import { AiOutlinePicture } from 'react-icons/ai';
+import { HiOutlineGift } from 'react-icons/hi';
+import { MdFormatListBulleted } from 'react-icons/md';
+import { BsEmojiSmile } from 'react-icons/bs';
+import { TbCalendarStats } from 'react-icons/tb';
+import { HiOutlineLocationMarker } from 'react-icons/hi';
+import { BiBold, BiItalic } from 'react-icons/bi';
 
 const WhatsHappening = () => {
  let [whatsHappening, setWhatsHappening] = useState('');
@@ -9,7 +16,7 @@ const WhatsHappening = () => {
     const newTuit = {
         tuit: whatsHappening
       }
-      dispatch(createTuit(newTuit));
+      dispatch(createTuitThunk(newTuit));
       setWhatsHappening("");
  }
  return (
@@ -28,14 +35,14 @@ const WhatsHappening = () => {
            Tuit
          </button>
          <div className="text-primary fs-2">
-           <i className="me-3"></i>
-           <i className="me-3"></i>
-           <i className="me-3"></i>
-           <i className="me-3"></i>
-           <i className="me-3"></i>
-           <i className="me-3"></i>
-           <i className="me-3"></i>
-           <i className="me-3"></i>
+         <AiOutlinePicture className="me-3" />
+          <HiOutlineGift className="me-3" />
+          <MdFormatListBulleted className="me-3" />
+          <BsEmojiSmile className="me-3" />
+          <TbCalendarStats className="me-3" />
+          <HiOutlineLocationMarker className="me-3" />
+          <BiBold className="me-3" />
+          <BiItalic className="me-3" />
          </div>
        </div>
      </div>
