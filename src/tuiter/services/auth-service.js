@@ -27,5 +27,5 @@ export const register = async (user) => {
     console.log(user);
     const response = await api.post(`${USERS_URL}/register`, user);
     console.log(response);
-    // return response.data;
+    return response.data;
 }
